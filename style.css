@@ -55,6 +55,53 @@ nav{
     color: white;
 }
 
+nav > ul{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+nav li{
+    list-style: none;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0 ;
+    padding: 0;
+}
+
+nav a{
+    color: white;
+    align-self: center;
+    text-decoration-line: none;
+    display: block;
+    border-right: solid #aaaaaa;
+    border-left: solid #9f9f9f;
+    border-width: 2px;
+    padding: 0 16px;
+}
+
+nav li:hover{
+    background-color: cyan;
+}
+
+nav li.active{
+    background-color: darkgray;
+}
+
+.dropdown{
+    display: none;
+    position: absolute;
+    top: 100%;
+    background-color: grey;
+    padding: 0;
+    margin: 0;
+}
+
+li:hover > .dropdown{
+    display: block;
+}
+
 /* ----------------------- Main CSS  --------------------------- */
 
 main{
