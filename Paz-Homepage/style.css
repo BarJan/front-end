@@ -41,11 +41,16 @@ header > .row:first-child{
 
 header > .row:last-child{
     position: relative;
-    top: 30%;
+    bottom: 20%;
     align-items: flex-end;
     padding: 0;    
 }
-
+header img{
+    position: relative;
+    top: 30px;
+    width: 142px;
+    object-fit: cover;
+}
 nav{
     padding: 0;
     margin: 0;
@@ -59,6 +64,7 @@ nav > ul{
     padding: 0;
     margin: 0;
     position: relative;
+    width: 100%;
 }
 
 nav li{
@@ -67,6 +73,9 @@ nav li{
     font-weight: bold;
     margin: 0 ;
     padding: 0;
+    border-right: solid #aaaaaa;
+    border-left: solid #9f9f9f;
+    border-width: 2px;
 }
 
 nav a{
@@ -74,10 +83,13 @@ nav a{
     align-self: center;
     text-decoration-line: none;
     display: block;
-    border-right: solid #aaaaaa;
-    border-left: solid #9f9f9f;
-    border-width: 2px;
-    padding: 0 16px;
+    padding: 0 15px;
+}
+nav li:first-child{
+    border-right: none;
+}
+nav li:last-child{
+    border-left: none;
 }
 
 nav li:hover{
@@ -134,9 +146,20 @@ main > .row:first-child > .column > .content{
     border-radius: 0 0 5% 0;
     width: 293px;
     height: 355px;
-    border: solid saddlebrown;
     margin: 0;
     padding: 0;
+}
+
+main > .row:first-child > .column:nth-child(1) > .content{
+    background-image: url("images/images/1908364606615453350.jpg");
+}
+
+main > .row:first-child > .column:nth-child(2) > .content{
+    background-image: url("images/images/Picture-046410251500.jpg");
+}
+
+main > .row:first-child > .column:nth-child(3) > .content{
+    background-image: url("images/images/פזקר_-291_354410564000.jpg");
 }
 
 main > .row:last-child > .column > .content{
