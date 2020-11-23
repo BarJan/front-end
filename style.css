@@ -1,1 +1,120 @@
 
+html, body{
+    height: 100%;
+    margin: 0;
+
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    direction: rtl;
+    text-align: right;
+    padding: 0;
+    margin: 0;
+    font-family: 'Arial (Hebrew)', Arial;
+}
+
+/* ----------------------- Header + nav CSS  --------------------------- */
+
+
+header{
+    height: 105px;
+    margin-bottom: 25px;
+ }
+
+header > .row{
+    margin: 0 auto;
+    padding: 0;
+    width: 900px;
+    display: flex;
+}
+
+header > .row:first-child{
+    justify-content: flex-end;
+}
+
+header > .row:last-child{
+    position: relative;
+    top: 30%;
+    align-items: flex-end;
+    padding: 0;    
+}
+
+nav{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+
+/* ----------------------- Main CSS  --------------------------- */
+
+main{
+    margin: 0 auto;
+    padding-bottom: 50px;
+    width: 900px;
+}
+
+
+main > .row{
+    display: flex;
+    width: 100%;
+    padding: 0;
+    margin: 15px auto;
+    justify-content: space-between;
+}
+
+.column{
+    padding: 0;
+    margin: 0;
+}
+
+/* .content{
+    width: 293px;
+    height: 355px;
+    border: solid saddlebrown;
+    margin: 10px 5px;
+} */
+
+main > .row:first-child > .column > .content{
+    border-radius: 0 0 5% 0;
+    width: 293px;
+    height: 355px;
+    border: solid saddlebrown;
+    margin: 0;
+    padding: 0;
+}
+
+main > .row:last-child > .column > .content{
+    border-radius: 0 5% 0 0;
+    width: 293px;
+    height: 216px;
+    border: solid saddlebrown;
+    margin: 0;
+    padding: 0;
+}
+
+/* ----------------------- Footer CSS  --------------------------- */
+
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 38px;
+    color: white;
+    }
+
+footer>div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: wheat;
+}
+
+
