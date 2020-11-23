@@ -6,6 +6,9 @@ html, body{
 
 *{
     box-sizing: border-box;
+    font-family: 'Arial (Hebrew)', Arial;
+    direction: rtl;
+    text-align: right;
 }
 
 body{
@@ -13,7 +16,6 @@ body{
     text-align: right;
     padding: 0;
     margin: 0;
-    font-family: 'Arial (Hebrew)', Arial;
 }
 
 /* ----------------------- Header + nav CSS  --------------------------- */
@@ -39,9 +41,42 @@ header > .row:first-child{
     justify-content: flex-end;
 }
 
+header > .row:first-child > div{
+    margin-top: 20px;
+}
+
+header > .row:first-child > div a{
+    margin: 0 0 0 15px;
+    padding: 0;
+    color: #fff;
+    text-decoration-line: none;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+header input{
+    margin: 0 0 0 1px;
+    padding: 0;
+    height: 19px;
+    border: solid #eeeeee;
+    border-radius: 0 7.5px 0 0;
+}
+
+header button{
+    margin: 0;
+    padding: 0;
+    width: 19px;
+    background-color: #BBBBBB;
+    text-align: center;
+}
+
+.fa-search{
+    color: #dddddd;
+}
+
 header > .row:last-child{
     position: relative;
-    bottom: 20%;
+    bottom: 30%;
     align-items: flex-end;
     padding: 0;    
 }
@@ -87,6 +122,8 @@ nav a{
 }
 nav li:first-child{
     border-right: none;
+    font-size: 24px;
+    font-weight: bold;
 }
 nav li:last-child{
     border-left: none;
@@ -130,9 +167,11 @@ main > .row{
     justify-content: space-between;
 }
 
-.column{
+main .column{
     padding: 0;
     margin: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 /* .content{
@@ -143,12 +182,14 @@ main > .row{
 } */
 
 main > .row:first-child > .column > .content{
-    border-radius: 0 0 5% 0;
+    border-radius: 0 0 20px 0;
     width: 293px;
     height: 355px;
     margin: 0;
     padding: 0;
+    position: relative;
 }
+
 
 main > .row:first-child > .column:nth-child(1) > .content{
     background-image: url("images/images/1908364606615453350.jpg");
@@ -162,8 +203,46 @@ main > .row:first-child > .column:nth-child(3) > .content{
     background-image: url("images/images/פזקר_-291_354410564000.jpg");
 }
 
+main > .row:first-child > .column > .content > div{
+    padding: 5px 10px;
+    margin: 0;
+    border-radius: 0 0 20px 0;
+    width: 248px;
+    height: 97px;
+    background-color: #8a8a8a;
+    opacity: 0.9;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    color: #fff;
+}
+
+main > .row:first-child > .column > .content > div > h5{
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+}
+
+main > .row:first-child > .column > .content > div > p{
+    font-size: 13px;
+    padding: 0;
+    margin: 0;
+}
+
+main > .row:first-child > .column > .content > div > a{
+    font-size: 13px;
+    color: white;
+    text-decoration-line: underline;
+    padding: 0;
+    margin: 0;
+    float: left;
+    position: relative;
+    bottom: 5px;
+}
+
+
 main > .row:last-child > .column > .content{
-    border-radius: 0 5% 0 0;
+    border-radius: 0 20px 0 0;
     width: 293px;
     height: 216px;
     border: solid saddlebrown;
