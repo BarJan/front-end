@@ -23,11 +23,11 @@ body{
 
 header{
     height: 105px;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
     background-color: #909090;
     background-image: linear-gradient(180deg,#909090 85%,#929292,#949494,#969696,#989898,#999999,
-    #9A9A9A,#9C9C9C,#9E9E9E,#9F9F9F,#A1A1A1,
-    #A2A2A2,#A4A4A4,#A6A6A6,#A8A8A8,#AAAAAA,#ACACAC,#ADADAD,#AFAFAF,#BBBBBB);
+    #9A9A9A 90%,#9C9C9C,#9E9E9E,#9F9F9F,#A1A1A1,
+    #A2A2A2 92.5%,#A4A4A4,#A6A6A6,#A8A8A8,#AAAAAA 95%,#ACACAC,#ADADAD,#AFAFAF,#BBBBBB 97.5%, #BBBCCC 100%);
 }
 
 header > .row{
@@ -55,11 +55,13 @@ header > .row:first-child > div a{
 }
 
 header input{
-    margin: 0 0 0 1px;
+    margin: 0 0 0 0;
     padding: 0;
     height: 19px;
+    width: 135px;
     border: solid #eeeeee;
     border-radius: 0 7.5px 0 0;
+    font-size: 12px;
 }
 
 header button{
@@ -82,7 +84,8 @@ header > .row:last-child{
 }
 header img{
     position: relative;
-    top: 40px;
+    top: 20px;
+    left: 7.5px;
     width: 142px;
     object-fit: cover;
 }
@@ -151,9 +154,9 @@ nav li.active{
     position: absolute;
     top: 100%;
     background-color: #909090;
-    background-image: linear-gradient(360deg,#909090 85%,#929292,#949494,#969696,#989898,#999999,
-    #9A9A9A,#9C9C9C,#9E9E9E,#9F9F9F,#A1A1A1,
-    #A2A2A2,#A4A4A4,#A6A6A6,#A8A8A8,#AAAAAA,#ACACAC,#ADADAD,#AFAFAF,#BBBBBB);
+    background-image: linear-gradient(360deg,#909090 80%,#929292,#949494,#969696,#989898,#999999,
+    #9A9A9A 85%,#9C9C9C,#9E9E9E,#9F9F9F,#A1A1A1,
+    #A2A2A2 90%,#A4A4A4,#A6A6A6,#A8A8A8 92.5%,#AAAAAA,#ACACAC,#ADADAD 93%,#AFAFAF 94%,#BBBBBB 97%);
     padding: 0;
     margin: 0;
     margin-right: 15px;
@@ -163,6 +166,7 @@ nav li.active{
     border: none;
     padding: 5px;
     border-bottom: solid #aaaaaa;
+    border-width: 0.1px;
 }
 
 .dropdown-ul li:hover{
@@ -195,16 +199,8 @@ main > .row{
 main .column{
     padding: 0;
     margin: 0;
-    display: flex;
-    flex-direction: column;
+    
 }
-
-/* .content{
-    width: 293px;
-    height: 355px;
-    border: solid saddlebrown;
-    margin: 10px 5px;
-} */
 
 main > .row:first-child > .column > .content{
     border-radius: 0 0 20px 0;
@@ -231,27 +227,30 @@ main > .row:first-child > .column:nth-child(3) > .content{
 }
 
 main > .row:first-child > .column > .content > div{
-    padding: 5px 10px;
+    padding: 10px 10px;
     margin: 0;
     border-radius: 0 0 20px 0;
     width: 248px;
     height: 97px;
-    background-color: #8a8a8a;
+    background-color: #808080;
+    line-height: 1;
     opacity: 0.9;
     margin-right: 5px;
     margin-bottom: 5px;
     color: #fff;
 }
 
-main > .row:first-child > .column > .content > div > h5{
+main > .row:first-child > .column > .content > div > p:first-child{
+    font-size: 14px;
     font-weight: bold;
-    padding: 0;
+    padding: 0 0 5px 0 ;
     margin: 0;
 }
 
-main > .row:first-child > .column > .content > div > p{
+main > .row:first-child > .column > .content > div > p:nth-child(2){
+    font-weight: 400;
     font-size: 13px;
-    padding: 0;
+    padding: 0 0 2px 0;
     margin: 0;
 }
 
@@ -268,13 +267,72 @@ main > .row:first-child > .column > .content > div > a{
 
 
 main > .row:last-child > .column > .content{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
     border-radius: 0 20px 0 0;
     width: 293px;
     height: 216px;
-    border: solid saddlebrown;
+    border: solid #ddd;
+    border-width: 0.2px;
     margin: 0;
     padding: 0;
+    background-color: #eeeeee;
+    background-image: linear-gradient(180deg,#ffffff,#fefefe,#fdfdfd,#fcfcfc,#fbfbfb,
+    #fafafa,#f9f9f9,#f8f8f8,#f7f7f7,#f6f6f6,
+    #f5f5f5 60%,#f4f4f4,#f3f3f3,#f2f2f2,#f1f1f1,#f0f0f0,#eeeeee );
+    
 }
+main > .row:last-child > .column > .content > p{
+    padding: 0 0 10px 0;
+    margin: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #575757;
+    border-bottom: solid #eee;
+    width: 244px;
+    align-self: center;
+    border-width: 3px;
+}
+
+main > .row:last-child > .column > .content > img{
+    width: 250px;
+    align-self: center;
+}
+
+main > .row:last-child > .column > .content a{
+    align-self: flex-end;
+    padding-left: 25px;
+    margin-top: 20px;
+    font-size: 13px;
+    color: gray;
+}
+main > .row:last-child > .column > .content i{
+    color: gold;
+    font-size: 9px;
+    margin-right: 5px;
+    text-align: left;
+}
+main > .row:first-child > .column > .content > div > a:hover,
+main > .row > .column > .content a:hover,
+main > .row > .column > .content a:hover > i{
+    color:#005ca0;
+}
+
+main > .row:last-child > .column:last-child img{
+    width: min-content;
+    object-fit: cover;
+    margin: -7.5px 0 0 25px;
+    float: left;
+}
+
+main > .row:last-child > .column:last-child a{
+    display: block;
+    margin: 5px 0 5px 0;
+    padding-left: 230px;
+    text-align: left;
+}
+
 
 /* ----------------------- Footer CSS  --------------------------- */
 
@@ -286,16 +344,46 @@ footer{
     height: 38px;
     color: white;
     background-color: #909090;
-    background-image: linear-gradient(360deg,#909090 85%,#929292,#949494,#969696,#989898,#999999,
-    #9A9A9A,#9C9C9C,#9E9E9E,#9F9F9F,#A1A1A1,
-    #A2A2A2,#A4A4A4,#A6A6A6,#A8A8A8,#AAAAAA,#ACACAC,#ADADAD,#AFAFAF,#BBBBBB);
+    background-image: linear-gradient(360deg,#909090 70%,#929292,#949494,#969696,#989898,#999999,
+    #9A9A9A 80%,#9C9C9C,#9E9E9E,#9F9F9F,#A1A1A1,
+    #A2A2A2 85%,#A4A4A4,#A6A6A6,#A8A8A8,#AAAAAA 90%,#ACACAC,#ADADAD,#AFAFAF,#BBBBBB 95%);
 }
 
-footer>div{
+footer > nav{
+    width: 900px;
+    margin: auto;
+}
+
+footer > nav > ul{
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: wheat;
+    align-items: flex-start;
+    padding: 0;
+    margin: 0;
+}
+
+footer > nav > ul li{
+    list-style: none;
+    padding: 14px 0 0 0;
+}
+
+footer > nav > ul > li a{
+    color: white;
+    text-decoration-line: none;
+    line-height: 1;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 0 5px 0 5px;
+    border-right: solid wheat;
+    border-width: 1.6px;
+}
+
+footer > nav > ul > li:first-child a{
+   border: none;
+   padding: 0 0 0 5px;
+}
+
+footer > nav > ul > li:last-child a{
+    color: red;
 }
 
 
