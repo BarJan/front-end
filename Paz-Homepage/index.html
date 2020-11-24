@@ -5,11 +5,11 @@
         <title>Window</title>
         <link href="style.css" type="text/css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script type="text/javascript" src="script.js"></script>
+        <script type="text/javascript" src="scripts.js"></script>
     </head>
 
     <body>
-       <header>
+       <header id="header">
            <div class="row">
             <div>
                 <a href="#">English</a>
@@ -20,8 +20,8 @@
            <div class="row">
                <img src="images/images/paz_logo.png" alt="פז לוגו">
                <nav class="nav">
-                <ul>
-                    <li><a href="#"><i class="fa fa-home"></i></a></li>
+                <ul class="row">
+                    <li><a href="#" onclick="homePage()"><i class="fa fa-home"></i></a></li>
                     <li class="dropdown"><a href="#">אודות</a>
                         <ul class="dropdown-ul">
                             <li>אודות</li>
@@ -85,10 +85,78 @@
             </nav>
            </div>
        </header>
-       <main>
+
+       <div id="formain">
            <div class="row">
                <div class="column">
+                   <div class="content">
+                        <a><span>&#129168;</span><span>צור קשר</span></a>
+                   </div>
+               </div>
+               <div class="column">
                     <div class="content">
+                        <ul class="breadcrumb">
+                            <li><a href="#" onclick="homePage()">עמוד הבית</a></li>
+                            <li>צור קשר</li>
+                        </ul>
+                        <p>צור קשר</p>
+                        <div>
+                            <form>
+                            
+                                <p>צור קשר</p>
+                                <p>ליצירת קשר עם קשרי לקוחות אנא מלאו את הפרטים הבאים ואנו נשמח לעמוד לרשותכם</p>
+                                <p>*השדות המסומנים בכוכבית (*) הינם שדות חובה</p>
+                                <div class="row">
+                                    <label for="fname">* שם פרטי</label>
+                                    <input type="text" id="fname" required>
+                                </div>
+                                <div class="row">
+                                    <label for="lname">* שם משפחה</label>
+                                    <input type="text" id="lname" required>
+                                </div>
+                                <div class="row">
+                                    <label for="tel">* טלפון</label>
+                                    <input type="tel" id="tel" required>
+                                </div>
+                                <div class="row">
+                                    <label for="email">* E-mail</label>
+                                    <input type="email" id="email" required>
+                                </div>
+                                <div class="row">
+                                    <textarea name="texta" id="texta" cols="20" rows="3" placeholder="תוכן הפנייה"></textarea>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+            </div>
+                <div class="column">
+                    <div class="row">
+                        <div class="content">
+                            <p>פרטי יצירת קשר</p>
+                            <p><strong>פז חברת נפט בע"מ</strong><br>
+                            יורו פארק, בניין הולנד<br>
+                            קיבוץ יקום 60972<br>
+                            טל. שירות לקוחות 1-800-774-774<br>
+                            פקס 09-8641714</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="content">
+                            <p>פרטי יצירת קשר</p>
+                            <p><strong>ליצירת קשר עם דוברות פז</strong><br>
+                            <a href="#">לחצו כאן>></a><br>
+                            <strong>רוצים לעבוד בפז?</strong><br>
+                            <a href="#">לחצו כאן>></a></p>
+                        </div>
+                    </div>
+                </div>
+           </div>
+       </div>
+
+       <main id="main">
+           <div class="row">
+               <div class="column">
+                    <div class="content column">
                         <div>
                             <p>קמעונאות ומסחר</p>
                             <p>במסגרת חטיבת הקו"מ של פז מתבצעת הפעילות הקמעונאית, הנדל"נית, והשיווקית של הקבוצה, שמתאפיינת בחדשנות, יעילות ומובילות. החטיבה פועלת...</p>
@@ -97,7 +165,7 @@
                     </div>
                </div>
                <div class="column">
-                    <div class="content">
+                    <div class="content column">
                         <div>
                             <p>זיקוק</p>
                             <p>פז זיקוק אשדוד (פז"א) היא חטיבת הזיקוק של קבוצת פז. החטיבה עוסקת בניהול פעילות בית הזיקוק באשדוד, הכוללת ייצור תזקיקי נפט...</p>
@@ -106,7 +174,7 @@
                     </div>
                </div>
                <div class="column">
-                    <div class="content">
+                    <div class="content column">
                         <div>
                             <p>תעשיות ושירותים</p>
                             <p>תחת חטיבת התעשיות והשירותים של פז פועלות מספר חברות בנות, המתמחות בפיתוח, ייצור ושיווק מוצרי לוואי של נפט, ומובילות את השוק...</p>
@@ -118,21 +186,21 @@
            
            <div class="row">
                <div class="column">
-                    <div class="content">
+                    <div class="content column">
                         <p>כרטיס אשראי שופרסל וכרטיס אשראי יש</p>
                         <img src="images/images/paz_250x110059890678.jpg" alt="מבצע אשראי">
                         <a href="#">לפרטים  נוספים<i class="fa fa-share-alt"></i></a>
                     </div>
                </div>
                <div class="column">
-                    <div class="content">
+                    <div class="content column">
                         <p>yellow click&pick;</p>
                         <img src="images/images/250X110571325734.jpg" alt="yellow">
                         <a href="#">לפרטים  נוספים<i class="fa fa-share-alt"></i></a>
                     </div>
                </div>
                <div class="column">
-                <div class="content">
+                <div class="content column">
                     <p>התחנות שלנו בדרך שלך</p>
                     <div>
                         <img src="images/images/map-transparent.png" alt="תחנות בדרך">
@@ -145,17 +213,17 @@
            </div>
 
        </main>
-       <footer>
+       <footer id="footer">
            <nav>
-                <ul>
+                <ul class="row">
                     <li><a href="#"><img src="images/images/fb_icon.png" alt="פייסבוק"></a></li>
-                    <li><a href="#">עמוד הבית</a></li>
+                    <li><a href="#" onclick="homePage()">עמוד הבית</a></li>
                     <li><a href="#">מחירונים</a></li>
                     <li><a href="#">קריירה</a></li>
                     <li><a href="#">תנאי שימוש</a></li>
                     <li><a href="#">נגישות</a></li>
                     <li><a href="#">מפת אתר</a></li>
-                    <li><a href="#">צור קשר</a></li>
+                    <li><a href="#" onclick="contactPage()">צור קשר</a></li>
                     <li><a href="#">שטחי מסחר</a></li>
                     <li><a href="#">הסדר פשרה בתובענה הייצוגית בעניין הסדר פזומט</a></li>
                 </ul>

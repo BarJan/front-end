@@ -18,6 +18,15 @@ body{
     margin: 0;
 }
 
+.row{
+    display: flex;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+}
+
 /* ----------------------- Header + nav CSS  --------------------------- */
 
 
@@ -34,7 +43,6 @@ header > .row{
     margin: 0 auto;
     padding: 0;
     width: 900px;
-    display: flex;
 }
 
 header > .row:first-child{
@@ -76,6 +84,10 @@ header button{
     color: #eeeeee;
 }
 
+.fa-home{
+    color:  #005ca0;
+}
+
 header > .row:last-child{
     position: relative;
     bottom: 30%;
@@ -98,7 +110,6 @@ nav{
 }
 
 nav > ul{
-    display: flex;
     padding: 0;
     margin: 0;
     position: relative;
@@ -189,7 +200,6 @@ main{
 
 
 main > .row{
-    display: flex;
     width: 100%;
     padding: 0;
     margin: 15px auto;
@@ -208,7 +218,6 @@ main > .row:first-child > .column > .content{
     height: 355px;
     margin: 0;
     padding: 0;
-    display: flex;
     flex-direction: column;
     justify-content: flex-end;
 }
@@ -267,8 +276,7 @@ main > .row:first-child > .column > .content > div > a{
 
 
 main > .row:last-child > .column > .content{
-    display: flex;
-    flex-direction: column;
+
     align-content: center;
     border-radius: 0 20px 0 0;
     width: 293px;
@@ -355,7 +363,6 @@ footer > nav{
 }
 
 footer > nav > ul{
-    display: flex;
     align-items: flex-start;
     padding: 0;
     margin: 0;
@@ -386,4 +393,251 @@ footer > nav > ul > li:last-child a{
     color: red;
 }
 
+footer ul a:hover {
+    color:#005ca0;
+    text-decoration-line: underline;
+}
 
+
+/* ---------------------- contact page layout using another class -------------- */
+
+
+/* -----------contact header ------------------- */
+
+header.contact .fa-home{
+    color:   #575757;
+}
+
+
+/* ------------ contact main ----------------- */
+
+main.contact{
+    display: none;
+}
+
+#formain{
+    width: 900px;
+    margin: 0 auto;
+    display: none;
+}
+
+#formain.contact{
+    display: block;
+}
+
+#formain > .row{
+    width: 100%;
+    padding: 0;
+    margin: 15px auto;
+    justify-content: space-between;
+}
+
+
+
+#formain .column:nth-child(1) a{
+    display: block;
+    text-align: right;
+    line-height: 1;
+    width: 122px;
+    height: 36px;
+    color: #555;
+    background-color: #eeeeee;
+    background-image: linear-gradient(180deg,#fdfdfd,#fbfbfb,
+    #f9f9f9,#f7f7f7,#f5f5f5 30%,
+    #f3f3f3,#f1f1f1,#efefef, #ececec, #eaeaea, #e8e8e8, #e6e6e6 60%,
+    #e4e4e4, #e2e2e2, #e0e0e0, #cecece, #cccccc );
+}
+
+#formain .column:nth-child(1) a span:first-child{
+    font-size: 30px;
+    margin-left: 5px;
+    color: #005ca0;
+}
+
+#formain .column:nth-child(1) a span:last-child{
+    font-size: 13px;
+}
+
+#formain .column:nth-child(2){
+    width: 440px;
+    height: 425.6px;
+    padding: 0;
+}
+
+ul.breadcrumb {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: transparent;
+  }
+  
+  /* Display list items side by side */
+  ul.breadcrumb li {
+    color: gray;
+    display: inline;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Add a slash symbol (/) before/behind each list item */
+  ul.breadcrumb li+li:before {
+    margin: 0;
+    padding: 0 0 0 3px;
+    color: gray;
+    content: ">";
+  }
+  
+  /* Add a color to all links inside the list */
+  ul.breadcrumb li a {
+    margin: 0;
+    padding: 0;
+    color: gray;
+    text-decoration: none;
+  }
+  
+  /* Add a color on mouse-over */
+  ul.breadcrumb li a:hover {
+    color:#005ca0;
+    text-decoration-line: underline;
+  }
+
+#formain .column:nth-child(2) .content > p{
+    font-size: 15px;
+    font-weight: 700;
+    color: #72716d;
+    border-bottom: 1px solid #cbcbcb;
+    margin-bottom: 12px;
+    padding-bottom: 4px
+}
+
+#formain .column:nth-child(2) .content > div{
+    width: 384.6px;
+    height: 356.8px;
+    border-radius: 0 20px 0 0;
+    border: solid lightgray;
+    border-width: 0.5px;
+    padding: 12px 0;
+    background-color: #eeeeee;
+    background-image: linear-gradient(180deg,#ffffff,#fefefe,#fdfdfd,#fcfcfc,#fbfbfb,
+    #fafafa,#f9f9f9,#f8f8f8,#f7f7f7,#f6f6f6,
+    #f5f5f5 60%,#f4f4f4,#f3f3f3,#f2f2f2,#f1f1f1,#f0f0f0,#eeeeee );
+}
+
+#formain .column:nth-child(2) form{
+    width: 347px;
+    height: 294px;
+    margin: 0 auto;
+}
+
+#formain .column:nth-child(2) form > p:first-child{
+    color: #005ca0;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 1;
+    padding: 0;
+    margin: 0;
+}
+
+#formain .column:nth-child(2) form > p:nth-child(2){
+    color: #6d6d6d;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin: 5px 0;
+}
+#formain .column:nth-child(2) form > p:nth-child(3){
+    color: #72716d;
+    font-size: 12px;
+}
+
+#formain .column:nth-child(2) form > .row{
+    margin: 0 auto 5px auto;
+    width: 245px;
+    justify-content: space-between;
+}
+
+#formain .column:nth-child(2) form label{
+    font-size: 12px;
+    color: #6d6d6d;
+}
+
+#formain .column:nth-child(2) form input{
+    width: 160px;
+    padding: 3px;
+    border: 1px solid #808992;
+}
+
+#formain .column:nth-child(2) form > .row:last-child{
+    justify-content: end;
+}
+
+#formain .column:nth-child(2) form textarea{
+    color: #6d6d6d;
+    box-sizing: content-box;
+    width: 235px;
+    height: 100px;
+    padding: 3px;
+    border: 1px solid #808992
+}
+
+#formain .column:nth-child(3){
+    width: 292px;
+    padding: 50px 0 0 0;
+}
+
+#formain .column:nth-child(3) .row{
+    height: 175px;
+    border-radius: 0 20px 0 0;
+    border: solid lightgray;
+    border-width: 0.5px;
+    padding: 18px 22px;
+    background-color: #eeeeee;
+    background-image: linear-gradient(180deg,#ffffff,#fefefe,#fdfdfd,#fcfcfc,#fbfbfb,
+    #fafafa,#f9f9f9,#f8f8f8,#f7f7f7,#f6f6f6,
+    #f5f5f5 60%,#f4f4f4,#f3f3f3,#f2f2f2,#f1f1f1,#f0f0f0,#eeeeee );
+}
+
+#formain .column:nth-child(3) .row .content{
+    width: 100%;
+    padding: 0;
+}
+
+#formain .column:nth-child(3) .row:last-child{
+    margin-top: 20px;
+}
+
+#formain .column:nth-child(3) .row p:first-child{
+    padding: 0;
+    margin: 0;
+    font-size: 15px;
+    font-weight: 700;
+    color: #005ca0;
+    border-bottom: 2px solid #eeeeee;
+    margin-bottom: 3px;
+    padding-bottom: 2px;
+    line-height: 1;
+}
+
+#formain .column:nth-child(3) .row p:last-child{
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    color: #6d6d6d;
+}
+
+#formain .column:nth-child(3) .row:last-child a{
+    text-decoration: none;
+    color: #005ca0;
+}
+#formain .column:nth-child(3) .row:last-child a:hover{
+    text-decoration-line: underline;
+}
+
+
+
+/* -------------contact footer ----------------- */
+footer.contact > nav > ul > li:last-child a{
+    color: white;
+}
