@@ -106,26 +106,31 @@
                                 <p>צור קשר</p>
                                 <p>ליצירת קשר עם קשרי לקוחות אנא מלאו את הפרטים הבאים ואנו נשמח לעמוד לרשותכם</p>
                                 <p>*השדות המסומנים בכוכבית (*) הינם שדות חובה</p>
-                                <div class="row">
+                                <div id="fn" class="row">
                                     <label for="fname">* שם פרטי</label>
-                                    <input type="text" id="fname" required>
+                                    <input type="text" id="fname" required onfocusout="formValidate()">
                                 </div>
-                                <div class="row">
+                                <span id="fnspan" class="validate">שדה חובה</span>
+                                <div id="ln" class="row">
                                     <label for="lname">* שם משפחה</label>
-                                    <input type="text" id="lname" required>
+                                    <input type="text" id="lname" required onfocusout="formValidate()">
                                 </div>
-                                <div class="row">
+                                <span id="lnspan" class="validate">שדה חובה</span>
+                                <div id="phone" class="row">
                                     <label for="tel">* טלפון</label>
-                                    <input type="tel" id="tel" required>
+                                    <input type="tel" id="tel" required onfocusout="formValidate()">
                                 </div>
-                                <div class="row">
+                                <span id="telspan" class="validate">שדה חובה</span>
+                                <div id="mail" class="row">
                                     <label for="email">* E-mail</label>
-                                    <input type="email" id="email" required>
+                                    <input type="email" id="email" required onfocusout="formValidate()">
                                 </div>
+                                <span id="mailspan" class="validate">שדה חובה</span>
                                 <div class="row">
                                     <textarea name="texta" id="texta" cols="20" rows="3" placeholder="תוכן הפנייה"></textarea>
                                 </div>
                             </form>
+                            <br><button onclick="formValidate()">שלח</button>
                         </div>
                     </div>
             </div>
