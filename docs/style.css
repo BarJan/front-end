@@ -224,7 +224,7 @@ main > .row:first-child > .column > .content{
 
 
 main > .row:first-child > .column:nth-child(1) > .content{
-    background-image: url();
+    background-image: url("images/images/1908364606615453350.jpg");
 }
 
 main > .row:first-child > .column:nth-child(2) > .content{
